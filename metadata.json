@@ -1,0 +1,10 @@
+{
+  "name": "Echo",
+  "description": "Echo Voice Sales OS for financial advisors. Automatically records client interactions, creates AI summaries, generates follow-up tasks, and drafts WhatsApp messages.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0c1324;
+    color: #dce1fb;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+.glass-card {
+  background-color: rgba(21, 27, 45, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(173, 198, 255, 0.2);
+  border-left: 1px solid rgba(173, 198, 255, 0.15);
+  border-right: 1px solid rgba(173, 198, 255, 0.05);
+  border-bottom: 1px solid rgba(173, 198, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #4d8eff 0%, #005ac2 100%);
+  box-shadow: 0 4px 14px 0 rgba(77, 142, 255, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(77, 142, 255, 0.5);
+}
+
+.btn-secondary {
+  border: 1px solid #3b82f6;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.pulse-wave {
+  background: linear-gradient(90deg, rgba(173,198,255,0) 0%, rgba(173,198,255,0.2) 50%, rgba(173,198,255,0) 100%);
+  background-size: 200% 100%;
+  animation: pulse-wave-anim 3s infinite linear;
+}
+
+@keyframes pulse-wave-anim {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.pulse-text {
+  background: linear-gradient(90deg, #adc6ff, #d0bcff, #adc6ff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: pulse-gradient 3s linear infinite;
+}
+
+@keyframes pulse-gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(173, 198, 255, 0.5);
+}
+
+.input-glow:focus {
+  box-shadow: 0 0 0 2px rgba(173, 198, 255, 0.3);
+}
+
+.bg-mesh {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(77, 142, 255, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(87, 27, 193, 0.15) 0px, transparent 50%);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotateY(-15deg) rotateX(10deg); }
+  50% { transform: translateY(-16px) rotateY(-12deg) rotateX(12deg); }
+  100% { transform: translateY(0px) rotateY(-15deg) rotateX(10deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
