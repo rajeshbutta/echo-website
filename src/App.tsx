@@ -7,6 +7,7 @@ import { HeroSection } from './components/HeroSection';
 import { ProblemSection } from './components/ProblemSection';
 import { FeaturesSection } from './components/FeaturesSection';
 import { LiveVoiceDemo } from './components/LiveVoiceDemo';
+import { VideoSection } from './components/VideoSection';
 import { PricingView } from './components/PricingView';
 import { DownloadView } from './components/DownloadView';
 import { LoginView } from './components/LoginView';
@@ -75,6 +76,7 @@ export default function App() {
             />
             <ProblemSection />
             <FeaturesSection />
+            <VideoSection />
 
             {/* Embedded Live Demo section on home page */}
             <div className="py-12">
