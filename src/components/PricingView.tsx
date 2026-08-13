@@ -83,7 +83,7 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
           <button
             onClick={() => {
               onSelectPlan?.('Starter');
-              setCurrentView('login');
+              window.open('https://admin.saraltechnomart.com', '_blank');
             }}
             className="mt-8 w-full border border-[#3b82f6] text-[#adc6ff] hover:bg-[#3b82f6]/10 px-4 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors"
           >
@@ -146,11 +146,11 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
           <button
             onClick={() => {
               onSelectPlan?.('Growth');
-              setCurrentView('login');
+              window.open('https://admin.saraltechnomart.com', '_blank');
             }}
             className="mt-8 w-full btn-primary text-white px-4 py-3 rounded-xl font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-600/30"
           >
-            Upgrade to Growth
+            Get Started
           </button>
         </div>
 

@@ -16,7 +16,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
       <div className="max-w-screen-2xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         {/* Left Column Text */}
         <div className="lg:col-span-7 flex flex-col items-start gap-8">
-          <img src="/echo_logo.png" alt="Echo" className="w-16 h-16 object-contain" />
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/30 text-[#adc6ff] text-xs font-semibold tracking-wide uppercase">
             <span className="w-2 h-2 rounded-full bg-[#3b82f6] animate-pulse" />
             Voice Sales OS for Advisors
@@ -33,7 +32,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2">
             <button
-              onClick={() => setCurrentView('login')}
+              onClick={() => window.open('https://admin.saraltechnomart.com', '_blank')}
               className="btn-primary px-8 py-4 rounded-full font-bold text-base text-white flex items-center justify-center gap-3 shadow-xl shadow-blue-600/30 hover:scale-105 active:scale-95 transition-all"
             >
               Start Free 30-Day Trial

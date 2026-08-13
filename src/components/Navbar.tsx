@@ -127,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   Login
                 </button>
                 <button
-                  onClick={() => setCurrentView('login')}
+                  onClick={() => window.open('https://admin.saraltechnomart.com', '_blank')}
                   className="btn-primary px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider text-white hover:opacity-95 transition-all shadow-lg shadow-blue-600/30 active:scale-95"
                 >
                   Start Free Trial
@@ -224,7 +224,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
                 <button
                   onClick={() => {
-                    setCurrentView('login');
+                    window.open('https://admin.saraltechnomart.com', '_blank');
                     setMobileMenuOpen(false);
                   }}
                   className="btn-primary w-full py-3 rounded-xl font-bold text-white text-center"
