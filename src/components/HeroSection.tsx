@@ -35,7 +35,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
               onClick={() => window.open('https://admin.saraltechnomart.com', '_blank')}
               className="btn-primary px-8 py-4 rounded-full font-bold text-base text-white flex items-center justify-center gap-3 shadow-xl shadow-blue-600/30 hover:scale-105 active:scale-95 transition-all"
             >
-              Start Free 30-Day Trial
+              Start Free 90-Day Trial
               <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                 arrow_forward
               </span>

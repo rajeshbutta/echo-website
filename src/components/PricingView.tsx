@@ -134,7 +134,10 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
                   <span className="material-symbols-outlined text-[#3b82f6] text-lg flex-shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                     check_circle
                   </span>
-                  900 AI call mins/user/quarter (pooled)
+                  900 mins/user/quarter · 300 mins/user/month (pooled)
+                </li>
+                <li className="flex items-start gap-3 text-[#c2c6d6] text-xs mt-1 ml-7">
+                  <span>Includes calling, transcription, AI summaries, storage &amp; notifications. Overage at ₹1.80/min.</span>
                 </li>
               </ul>
             </div>
@@ -183,7 +186,10 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
                   <span className="material-symbols-outlined text-[#3b82f6] text-lg flex-shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                     check_circle
                   </span>
-                  3,600 AI call mins/user/year (pooled)
+                  3,600 mins/user/year · 300 mins/user/month (pooled)
+                </li>
+                <li className="flex items-start gap-3 text-[#c2c6d6] text-xs mt-1 ml-7">
+                  <span>Includes calling, transcription, AI summaries, storage &amp; notifications. Overage at ₹1.80/min.</span>
                 </li>
               </ul>
             </div>
@@ -223,7 +229,7 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
             </tbody>
           </table>
           <div className="px-6 py-4 text-xs text-[#c2c6d6]/60">
-            Overage billed at actual infrastructure cost × 2 on the next quarterly invoice. Calling continues uninterrupted.
+            Minutes include calling number charges, AI transcription, AI summaries, storage &amp; notifications. Overage billed at ₹1.80/min on next quarterly invoice. Calling continues uninterrupted.
           </div>
         </div>
       </section>

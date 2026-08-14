@@ -96,7 +96,7 @@ export default function App() {
                   onClick={() => setCurrentView('login')}
                   className="btn-primary px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider text-white shadow-xl shadow-blue-600/30"
                 >
-                  Start Free 30-Day Trial
+                  Start Free 90-Day Trial
                 </button>
               </div>
             </section>
