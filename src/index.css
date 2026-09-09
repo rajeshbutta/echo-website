@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* ── Safari <15.4 colour fallbacks ─────────────────────────────────────────
+   Tailwind v4 generates oklch() colours which Safari 14/15 don't support.
+   These explicit overrides ensure the core palette renders correctly.      */
+:root {
+  --color-background: #0c1324;
+  --color-foreground: #dce1fb;
+}
+
 @layer base {
   body {
     font-family: 'Inter', sans-serif;

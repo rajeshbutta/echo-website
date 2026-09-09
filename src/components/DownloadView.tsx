@@ -36,37 +36,35 @@ export const DownloadView: React.FC<DownloadViewProps> = ({ setCurrentView }) =>
             <div className="flex flex-col sm:flex-row items-center gap-6 mt-6 w-full">
               {/* Primary Download Button */}
               <a
-                href="#download-play"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('Initiating Echo Voice Sales OS Android APK download...');
-                }}
+                href="https://echo.saraltechnomart.com/download/echo-latest.apk"
                 className="btn-primary flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-white font-semibold w-full sm:w-auto shadow-lg shadow-blue-600/30"
               >
                 <span className="material-symbols-outlined text-[28px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                   android
                 </span>
                 <div className="flex flex-col items-start">
-                  <span className="text-[10px] opacity-80 uppercase tracking-wider">Download on</span>
-                  <span className="text-base font-bold">Google Play</span>
+                  <span className="text-[10px] opacity-80 uppercase tracking-wider">Download APK</span>
+                  <span className="text-base font-bold">Android App</span>
                 </div>
               </a>
 
               <div className="hidden sm:flex items-center gap-4">
                 <div className="h-12 w-px bg-white/20" />
-                {/* QR Code */}
-                <div className="glass-card p-2.5 rounded-xl flex items-center justify-center shrink-0 border-white/20">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD655VX3pAAcwN-7G2SYe_KhHhBRIHuY3xLM2GsWpN7anihklOL5mzwm8Iq-Q3IYY9JNIdvsBtRe_0P9BTjo3fIRO-5J9266fLPpMbqEVVG7Yxm7eQ84cYvOqi8wtc4VpfTeAJGYlneYyoXS0OvATfcqyDZEdUdQiu9qEgj7U_By_mbHFPuPyQSPNd6PMtfitJzOSS-jPi77q6mO6_9zC4R9Ng4ndAm3v4c5yriB0ZFmy9MqHvy14GD"
-                    alt="Scan QR Code to Install Echo"
-                    className="w-20 h-20 rounded-lg opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-                <span className="text-xs text-[#c2c6d6] max-w-[100px] text-left leading-tight font-medium">
-                  Scan to install directly
-                </span>
+                <a
+                  href="/onboarding.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#adc6ff] hover:text-white text-sm font-semibold transition-colors flex items-center gap-1.5"
+                >
+                  <span className="material-symbols-outlined text-base">menu_book</span>
+                  Quick Start Guide
+                </a>
               </div>
             </div>
+
+            <p className="text-[#c2c6d6]/60 text-xs mt-4 max-w-sm">
+              Google Play Store listing coming soon. Until then, download the APK directly and install on your Android device.
+            </p>
           </div>
 
           {/* Right: App Showcase Image */}
@@ -100,9 +98,9 @@ export const DownloadView: React.FC<DownloadViewProps> = ({ setCurrentView }) =>
                   1
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white text-base">Download the App</h3>
+                  <h3 className="font-semibold text-white text-base">Download the APK</h3>
                   <p className="text-[#c2c6d6] text-sm mt-1">
-                    Tap the Google Play button above or scan the QR code to open the secure store page.
+                    Tap the Download button above. Open the file on your Android device and tap Install. If prompted, enable <em>"Install from unknown sources"</em> in your device settings.
                   </p>
                 </div>
               </li>
@@ -112,9 +110,9 @@ export const DownloadView: React.FC<DownloadViewProps> = ({ setCurrentView }) =>
                   2
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white text-base">Authenticate</h3>
+                  <h3 className="font-semibold text-white text-base">Sign In with Your Phone Number</h3>
                   <p className="text-[#c2c6d6] text-sm mt-1">
-                    Sign in using your Echo advisor credentials. Biometric fingerprint/Face ID login is supported.
+                    Enter your registered mobile number. You'll receive a 6-digit OTP to verify — no password needed.
                   </p>
                 </div>
               </li>
@@ -126,7 +124,7 @@ export const DownloadView: React.FC<DownloadViewProps> = ({ setCurrentView }) =>
                 <div>
                   <h3 className="font-semibold text-white text-base">Grant Permissions</h3>
                   <p className="text-[#c2c6d6] text-sm mt-1">
-                    Allow microphone access for voice recording and notifications for real-time task updates.
+                    Allow microphone access for call recording and notifications for task updates. Both are required for the app to function.
                   </p>
                 </div>
               </li>

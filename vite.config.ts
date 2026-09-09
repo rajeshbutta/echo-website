@@ -11,6 +11,11 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      // Target Safari 14+ so the bundle is transpiled for macOS users on
+      // older OS versions (Monterey / Ventura ship with Safari 15/16).
+      target: ['es2019', 'safari14', 'chrome87', 'firefox78'],
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

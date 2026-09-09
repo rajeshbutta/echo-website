@@ -21,8 +21,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       {/* Desktop & Main Navbar */}
-      <nav className="bg-[#0c1324]/80 backdrop-blur-xl border-b border-white/10 fixed top-0 w-full z-50 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] transition-all">
-        <div className="flex items-center justify-between px-6 py-4 max-w-screen-2xl mx-auto w-full">
+      <nav className="bg-white border-b border-slate-200 fixed top-0 w-full z-50 shadow-sm transition-all">
+        <div className="flex items-center justify-between px-6 py-3 max-w-screen-2xl mx-auto w-full">
           {/* Brand Logo */}
           <button
             onClick={() => {
@@ -33,10 +33,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <img src="/echo_logo.png" alt="Echo" className="w-9 h-9 object-contain group-hover:scale-105 transition-transform" />
             <div>
-              <span className="font-display font-bold text-2xl tracking-tight text-[#adc6ff] block leading-none">
+              <span className="font-display font-bold text-2xl tracking-tight text-[#002060] block leading-none">
                 Echo
               </span>
-              <span className="text-[10px] text-[#c2c6d6] tracking-wider uppercase font-semibold">
+              <span className="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">
                 Voice Sales OS
               </span>
             </div>
@@ -48,8 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => setCurrentView('home')}
               className={`font-medium transition-colors text-base py-1 px-2 ${
                 currentView === 'home'
-                  ? 'text-[#adc6ff] font-bold border-b-2 border-[#adc6ff]'
-                  : 'text-[#c2c6d6]/80 hover:text-white'
+                  ? 'text-[#002060] font-bold underline underline-offset-[6px] decoration-2 decoration-[#2563EB]'
+                  : 'text-slate-500 hover:text-slate-900'
               }`}
             >
               Home
@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="text-[#c2c6d6]/80 hover:text-white transition-colors font-medium text-base py-1 px-2"
+              className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-base py-1 px-2"
             >
               Features
             </button>
@@ -69,8 +69,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => setCurrentView('pricing')}
               className={`font-medium transition-colors text-base py-1 px-2 ${
                 currentView === 'pricing'
-                  ? 'text-[#adc6ff] font-bold border-b-2 border-[#adc6ff]'
-                  : 'text-[#c2c6d6]/80 hover:text-white'
+                  ? 'text-[#002060] font-bold underline underline-offset-[6px] decoration-2 decoration-[#2563EB]'
+                  : 'text-slate-500 hover:text-slate-900'
               }`}
             >
               Pricing
@@ -79,20 +79,28 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => setCurrentView('download')}
               className={`font-medium transition-colors text-base py-1 px-2 ${
                 currentView === 'download'
-                  ? 'text-[#adc6ff] font-bold border-b-2 border-[#adc6ff]'
-                  : 'text-[#c2c6d6]/80 hover:text-white'
+                  ? 'text-[#002060] font-bold underline underline-offset-[6px] decoration-2 decoration-[#2563EB]'
+                  : 'text-slate-500 hover:text-slate-900'
               }`}
             >
               Get App
             </button>
+            <a
+              href="/onboarding.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-base py-1 px-2"
+            >
+              Quick Start
+            </a>
 
             {isLoggedIn && (
               <button
                 onClick={() => setCurrentView('dashboard')}
                 className={`font-semibold transition-colors text-base py-1 px-3 rounded-lg ${
                   currentView === 'dashboard'
-                    ? 'bg-[#3b82f6]/20 text-[#adc6ff] border border-[#3b82f6]/40'
-                    : 'text-[#adc6ff] hover:bg-white/5'
+                    ? 'bg-[#002060]/10 text-[#002060] border border-[#002060]/20'
+                    : 'text-slate-600 hover:bg-slate-100'
                 }`}
               >
                 Dashboard ({userRole === 'admin' ? 'Admin' : 'Advisor'})
@@ -113,7 +121,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </button>
                 <button
                   onClick={onLogout}
-                  className="text-[#c2c6d6] hover:text-white text-xs font-semibold uppercase tracking-wider px-3 py-2"
+                  className="text-slate-500 hover:text-slate-900 text-xs font-semibold uppercase tracking-wider px-3 py-2"
                 >
                   Sign Out
                 </button>
@@ -122,13 +130,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setCurrentView('login')}
-                  className="text-[#dce1fb] hover:text-[#adc6ff] font-semibold text-xs uppercase tracking-wider transition-colors px-3 py-2"
+                  className="text-slate-600 hover:text-slate-900 font-semibold text-xs uppercase tracking-wider transition-colors px-3 py-2"
                 >
                   Login
                 </button>
                 <button
                   onClick={() => window.open('https://admin.saraltechnomart.com', '_blank')}
-                  className="btn-primary px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider text-white hover:opacity-95 transition-all shadow-lg shadow-blue-600/30 active:scale-95"
+                  className="bg-[#002060] hover:bg-[#0d3080] text-white px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95"
                 >
                   Start Free Trial
                 </button>
@@ -139,7 +147,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10"
+            className="md:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100"
           >
             <span className="material-symbols-outlined text-2xl">
               {mobileMenuOpen ? 'close' : 'menu'}
@@ -149,13 +157,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#0c1324] border-b border-white/10 px-6 py-6 flex flex-col gap-4">
+          <div className="md:hidden bg-white border-b border-slate-200 px-6 py-6 flex flex-col gap-4">
             <button
               onClick={() => {
                 setCurrentView('home');
                 setMobileMenuOpen(false);
               }}
-              className="text-left text-lg font-medium text-white py-2"
+              className="text-left text-lg font-medium text-slate-900 py-2"
             >
               Home
             </button>
@@ -167,7 +175,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="text-left text-lg font-medium text-[#c2c6d6] py-2"
+              className="text-left text-lg font-medium text-slate-600 py-2"
             >
               Features
             </button>
@@ -176,7 +184,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setCurrentView('pricing');
                 setMobileMenuOpen(false);
               }}
-              className="text-left text-lg font-medium text-[#c2c6d6] py-2"
+              className="text-left text-lg font-medium text-slate-600 py-2"
             >
               Pricing
             </button>
@@ -185,19 +193,28 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setCurrentView('download');
                 setMobileMenuOpen(false);
               }}
-              className="text-left text-lg font-medium text-[#c2c6d6] py-2"
+              className="text-left text-lg font-medium text-slate-600 py-2"
             >
               Download App
             </button>
+            <a
+              href="/onboarding.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-left text-lg font-medium text-slate-600 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Quick Start Guide
+            </a>
 
             {isLoggedIn ? (
-              <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+              <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
                 <button
                   onClick={() => {
                     setCurrentView('dashboard');
                     setMobileMenuOpen(false);
                   }}
-                  className="btn-primary w-full py-3 rounded-xl font-bold text-white text-center"
+                  className="bg-[#002060] w-full py-3 rounded-xl font-bold text-white text-center"
                 >
                   Open Voice Sales OS
                 </button>
@@ -206,19 +223,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onLogout();
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full py-2 text-[#c2c6d6] text-center"
+                  className="w-full py-2 text-slate-500 text-center"
                 >
                   Sign Out
                 </button>
               </div>
             ) : (
-              <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+              <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
                 <button
                   onClick={() => {
                     setCurrentView('login');
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full py-3 border border-white/20 rounded-xl font-bold text-white text-center"
+                  className="w-full py-3 border border-slate-300 rounded-xl font-bold text-slate-900 text-center"
                 >
                   Login
                 </button>
@@ -227,7 +244,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     window.open('https://admin.saraltechnomart.com', '_blank');
                     setMobileMenuOpen(false);
                   }}
-                  className="btn-primary w-full py-3 rounded-xl font-bold text-white text-center"
+                  className="bg-[#002060] w-full py-3 rounded-xl font-bold text-white text-center"
                 >
                   Start Free Trial
                 </button>

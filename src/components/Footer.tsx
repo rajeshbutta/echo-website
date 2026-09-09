@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => {
             Voice Sales OS for high-performance financial advisors. Automate client summaries, task management, and WhatsApp updates.
           </p>
           <p className="text-[#c2c6d6]/50 text-xs mt-2">
-            © 2026 Echo Voice Sales OS. All rights reserved.
+            © 2026 Saral TechnoMart Private Limited. All rights reserved.
           </p>
         </div>
 
@@ -57,13 +57,21 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => {
           <h4 className="font-semibold text-xs tracking-wider uppercase text-white mb-1">
             Support
           </h4>
-          <a href="#support" onClick={(e) => { e.preventDefault(); alert('Support team reachable at support@echo.ai or +91 800-ECHO-OS'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
+          <a
+            href="/onboarding.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors"
+          >
+            Quick Start Guide
+          </a>
+          <a href="#support" onClick={(e) => { e.preventDefault(); alert('Support: echo-support@saraltechnomart.com'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
             Help Center
           </a>
-          <a href="#contact" onClick={(e) => { e.preventDefault(); alert('Contact Sales: sales@echo.ai'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
-            Contact Sales
+          <a href="mailto:echo-support@saraltechnomart.com" className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
+            Contact Us
           </a>
-          <a href="#status" onClick={(e) => { e.preventDefault(); alert('All Systems Operational (99.99% Uptime)'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
+          <a href="#status" onClick={(e) => { e.preventDefault(); alert('All Systems Operational'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
             System Status
           </a>
         </div>
