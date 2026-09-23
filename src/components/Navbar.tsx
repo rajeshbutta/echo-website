@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ViewType, UserRole } from '../types';
 
 interface NavbarProps {
@@ -17,6 +17,20 @@ export const Navbar: React.FC<NavbarProps> = ({
   onLogout,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  // Watch #features (and any future anchored sections) to update active nav item
+  useEffect(() => {
+    if (currentView !== 'home') { setActiveSection(null); return; }
+    const el = document.getElementById('features');
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setActiveSection(entry.isIntersecting ? 'features' : null),
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [currentView]);
 
   return (
     <>
@@ -45,9 +59,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Nav Links (Desktop) */}
           <div className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => setCurrentView('home')}
+              onClick={() => { setCurrentView('home'); setActiveSection(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className={`font-medium transition-colors text-base py-1 px-2 ${
-                currentView === 'home'
+                currentView === 'home' && activeSection !== 'features'
                   ? 'text-[#002060] font-bold underline underline-offset-[6px] decoration-2 decoration-[#2563EB]'
                   : 'text-slate-500 hover:text-slate-900'
               }`}
@@ -57,11 +71,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={() => {
                 setCurrentView('home');
+                setActiveSection('features');
                 setTimeout(() => {
                   document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="text-slate-500 hover:text-slate-900 transition-colors font-medium text-base py-1 px-2"
+              className={`font-medium transition-colors text-base py-1 px-2 ${
+                currentView === 'home' && activeSection === 'features'
+                  ? 'text-[#002060] font-bold underline underline-offset-[6px] decoration-2 decoration-[#2563EB]'
+                  : 'text-slate-500 hover:text-slate-900'
+              }`}
             >
               Features
             </button>
