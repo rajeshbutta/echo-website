@@ -22,12 +22,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
           </div>
 
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight">
-            Never Forget Another{' '}
-            <span className="pulse-text glow-text">Client Conversation.</span>
+            Never Forget a Conversation.{' '}
+            <span className="pulse-text glow-text">Never Miss a Renewal.</span>
           </h1>
 
           <p className="text-[#c2c6d6] text-lg sm:text-xl leading-relaxed max-w-2xl font-normal">
-            Echo automatically records every client interaction, creates AI summaries, generates follow-up tasks, and drafts personalized WhatsApp messages—so your advisors never miss an opportunity.
+            Echo records every client call, generates AI summaries, tracks policy renewals, and sends automated WhatsApp follow-ups — so your advisors close more, retain more, and never drop the ball.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2">
@@ -55,16 +55,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
           {/* Social Proof metrics */}
           <div className="pt-8 border-t border-white/10 w-full grid grid-cols-3 gap-6">
             <div>
-              <div className="font-display text-2xl sm:text-3xl font-bold text-white">3.8x</div>
-              <div className="text-xs text-[#c2c6d6]/70 mt-1">Faster Client Follow-up</div>
-            </div>
-            <div>
-              <div className="font-display text-2xl sm:text-3xl font-bold text-[#adc6ff]">100%</div>
+              <div className="font-display text-2xl sm:text-3xl font-bold text-white">100%</div>
               <div className="text-xs text-[#c2c6d6]/70 mt-1">Automated Call Summaries</div>
             </div>
             <div>
+              <div className="font-display text-2xl sm:text-3xl font-bold text-[#adc6ff]">0 Missed</div>
+              <div className="text-xs text-[#c2c6d6]/70 mt-1">Policy Renewals</div>
+            </div>
+            <div>
               <div className="font-display text-2xl sm:text-3xl font-bold text-[#d0bcff]">₹500</div>
-              <div className="text-xs text-[#c2c6d6]/70 mt-1">Affordable User/Mo</div>
+              <div className="text-xs text-[#c2c6d6]/70 mt-1">Per User / Month</div>
             </div>
           </div>
         </div>

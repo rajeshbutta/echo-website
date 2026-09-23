@@ -15,7 +15,7 @@ export const FeaturesSection: React.FC = () => {
             Intelligent Automation for Modern Financial Advisors.
           </h2>
           <p className="text-[#c2c6d6] text-base sm:text-lg mt-4 font-normal">
-            From the first ring to the final policy issuance, Echo runs quietly in the background powering your entire sales workflow.
+            From the first ring to policy renewal, Echo runs quietly in the background — capturing every conversation, automating follow-ups, and ensuring no renewal ever slips through the cracks.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export const FeaturesSection: React.FC = () => {
                 Crystal Voice Calling
               </h3>
               <p className="text-[#c2c6d6] text-sm leading-relaxed">
-                Make high-quality VoIP or mobile calls directly through the Echo advisor app. Every call is securely recorded and ready for instant AI analysis.
+                Make high-quality VoIP calls directly through the Echo advisor app using your organization's virtual numbers. Assign numbers by team, territory, or product line. Every call is securely recorded and ready for instant AI analysis.
               </p>
             </div>
           </div>
@@ -46,10 +46,10 @@ export const FeaturesSection: React.FC = () => {
             </div>
             <div>
               <h3 className="font-display font-bold text-xl text-white mb-2 group-hover:text-[#d0bcff] transition-colors">
-                AI Transcription & Executive Summary
+                AI Transcription & Smart Summary
               </h3>
               <p className="text-[#c2c6d6] text-sm leading-relaxed">
-                Powered by Gemini AI, convert speech into clean text in real-time. Extract key financial needs, customer sentiment, and policy interest automatically.
+                Powered by OpenAI Whisper and GPT, every call is transcribed, speaker-labeled, and summarized automatically — extracting primary intent, key points, client objections, sentiment, and follow-up urgency. Zero manual note-taking.
               </p>
             </div>
           </div>
@@ -63,15 +63,32 @@ export const FeaturesSection: React.FC = () => {
             </div>
             <div>
               <h3 className="font-display font-bold text-xl text-white mb-2 group-hover:text-[#89ceff] transition-colors">
-                WhatsApp Follow-up Automation
+                WhatsApp Follow-up & Renewal Alerts
               </h3>
               <p className="text-[#c2c6d6] text-sm leading-relaxed">
-                Auto-generate warm, personalized WhatsApp messages immediately after a call. Send policy quotes, meeting takeaways, and next steps with 1-click.
+                AI drafts a warm, personalized WhatsApp message after every call — ready to review and send in one tap. Renewal reminders are sent automatically as due dates approach, so no policy renewal is ever missed.
               </p>
             </div>
           </div>
 
           {/* Feature 4 */}
+          <div className="flex gap-6 items-start group">
+            <div className="w-14 h-14 rounded-2xl bg-[#f59e0b]/10 border border-[#f59e0b]/30 flex items-center justify-center shrink-0 text-[#fcd34d] group-hover:scale-110 transition-transform">
+              <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                autorenew
+              </span>
+            </div>
+            <div>
+              <h3 className="font-display font-bold text-xl text-white mb-2 group-hover:text-[#fcd34d] transition-colors">
+                Renewal & Policy Lifecycle Management
+              </h3>
+              <p className="text-[#c2c6d6] text-sm leading-relaxed">
+                Assign products to clients by category — term, health, SIP, motor, and more. Set reference numbers, provider, premium amount, and next due date. Echo tracks every policy's renewal calendar and alerts advisors before lapse.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 5 */}
           <div className="flex gap-6 items-start group">
             <div className="w-14 h-14 rounded-2xl bg-[#10b981]/10 border border-[#10b981]/30 flex items-center justify-center shrink-0 text-[#6ee7b7] group-hover:scale-110 transition-transform">
               <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
@@ -83,7 +100,24 @@ export const FeaturesSection: React.FC = () => {
                 Unified Client Timeline
               </h3>
               <p className="text-[#c2c6d6] text-sm leading-relaxed">
-                Maintain a complete, chronological record of every conversation, WhatsApp message, active policy, and pending task for every client in one place.
+                A complete, chronological record of every call, WhatsApp thread, active policy, and pending task — all in one place for every client. Your entire relationship history, always at your fingertips.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 6 */}
+          <div className="flex gap-6 items-start group">
+            <div className="w-14 h-14 rounded-2xl bg-[#ec4899]/10 border border-[#ec4899]/30 flex items-center justify-center shrink-0 text-[#f9a8d4] group-hover:scale-110 transition-transform">
+              <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                group
+              </span>
+            </div>
+            <div>
+              <h3 className="font-display font-bold text-xl text-white mb-2 group-hover:text-[#f9a8d4] transition-colors">
+                Team & Multi-Number Management
+              </h3>
+              <p className="text-[#c2c6d6] text-sm leading-relaxed">
+                Add multiple advisors under one organization. Assign dedicated virtual phone numbers per advisor or team. Admins get a full performance dashboard — calls made, sentiment trends, renewals tracked, and WhatsApp messages sent.
               </p>
             </div>
           </div>

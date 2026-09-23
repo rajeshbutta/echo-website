@@ -33,15 +33,15 @@ Client: Perfect, send the link over. Thanks Ramesh!`
   },
   {
     id: 's3',
-    title: 'Family Health Floater Inquiry',
+    title: 'Policy Renewal Follow-up',
     clientName: 'Amit Verma',
-    topic: '15 Lac Zero Co-Pay Health Plan',
-    transcript: `Advisor: Hello Amit, hope you are doing well. Following up on your query for a comprehensive health floater for your family of 4.
-Client: Hi Ramesh. My main concern with my company health policy is the 20% co-pay on senior family members and room rent sub-limits.
-Advisor: Understood. I recommend the Care Advantage 15 Lac Floater Plan. It features zero room-rent cap, 100% restore benefit, and no co-payment at all across 11,000+ network hospitals.
-Client: That addresses my main worry. What is the pre-existing disease waiting period?
-Advisor: Standard 3 years, but with the reduction add-on we can bring it down to 2 years. Let me send you the full benefit breakdown matrix on WhatsApp.
-Client: Please do, I want to finalize this before the month end.`
+    topic: 'Annual Health Policy Renewal',
+    transcript: `Advisor: Hello Amit, hope you are doing well. Your Star Health Floater policy is due for renewal on the 15th of next month and I wanted to ensure we get it processed in time.
+Client: Oh thanks for reminding me Ramesh! I completely forgot. Is there any change in the premium this year?
+Advisor: Yes, there is a 12% revision due to the age bracket change this cycle. The revised annual premium comes to ₹24,800 for the same 10 Lac cover. However, I can also upgrade you to a 15 Lac cover for just ₹5,000 more, which would give you zero co-pay and a 100% restore benefit.
+Client: That upgrade sounds worth it given medical costs. Can you share the comparison on WhatsApp?
+Advisor: Absolutely, I will send the full comparison and the renewal payment link on WhatsApp right now. The upgrade offer is valid until renewal date so let us process it this week.
+Client: Sounds good. Thanks for proactively reaching out, Ramesh!`
   }
 ];
 

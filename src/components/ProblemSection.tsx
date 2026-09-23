@@ -11,11 +11,11 @@ export const ProblemSection: React.FC = () => {
           The Data Gap in Financial Advisory
         </h2>
         <p className="text-[#c2c6d6] text-base sm:text-lg max-w-3xl mx-auto">
-          Insurance and wealth advisors lose critical context between back-to-back client calls. Memory fades, notes remain handwritten or incomplete, and warm leads go cold.
+          Insurance and wealth advisors lose critical context between back-to-back client calls — and lose even more revenue when renewals fall through the cracks.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Card 1 */}
         <div className="glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:border-[#ffb4ab]/40 transition-all hover:-translate-y-1">
           <div className="w-16 h-16 rounded-2xl bg-[#ffb4ab]/10 border border-[#ffb4ab]/20 flex items-center justify-center mb-6 text-[#ffb4ab]">
@@ -34,7 +34,7 @@ export const ProblemSection: React.FC = () => {
           </div>
           <h3 className="font-display font-bold text-xl text-white mb-3">Wasted Time</h3>
           <p className="text-[#c2c6d6] text-sm leading-relaxed">
-            Advisors waste up to 2 hours every day manually summarizing discussions and drafting repetitive follow-up emails and WhatsApp messages.
+            Advisors waste up to 2 hours every day manually summarizing discussions and drafting repetitive follow-up WhatsApp messages.
           </p>
         </div>
 
@@ -45,7 +45,18 @@ export const ProblemSection: React.FC = () => {
           </div>
           <h3 className="font-display font-bold text-xl text-white mb-3">Missed Sales</h3>
           <p className="text-[#c2c6d6] text-sm leading-relaxed">
-            Without automated, real-time task generation, follow-up calls are delayed or skipped entirely—costing renewals and policy upgrades.
+            Without automated task generation and follow-up tracking, warm leads go cold and policy upgrades are never offered at the right time.
+          </p>
+        </div>
+
+        {/* Card 4 — NEW */}
+        <div className="glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:border-[#fcd34d]/40 transition-all hover:-translate-y-1">
+          <div className="w-16 h-16 rounded-2xl bg-[#fcd34d]/10 border border-[#fcd34d]/20 flex items-center justify-center mb-6 text-[#fcd34d]">
+            <span className="material-symbols-outlined text-3xl">event_busy</span>
+          </div>
+          <h3 className="font-display font-bold text-xl text-white mb-3">Lapsed Renewals</h3>
+          <p className="text-[#c2c6d6] text-sm leading-relaxed">
+            Policy renewal dates tracked in spreadsheets are missed silently. One lapsed renewal can cost months of commission — and the client relationship.
           </p>
         </div>
       </div>
