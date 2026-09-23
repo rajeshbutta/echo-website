@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { HeroSection } from './components/HeroSection';
 import { ProblemSection } from './components/ProblemSection';
 import { FeaturesSection } from './components/FeaturesSection';
+import { TrustSection } from './components/TrustSection';
 import { LiveVoiceDemo } from './components/LiveVoiceDemo';
 import { VideoSection } from './components/VideoSection';
 import { PricingView } from './components/PricingView';
@@ -76,6 +77,7 @@ export default function App() {
             />
             <ProblemSection />
             <FeaturesSection />
+            <TrustSection />
             <VideoSection />
 
             {/* Embedded Live Demo section on home page */}
@@ -90,7 +92,7 @@ export default function App() {
                   Ready to Supercharge Your Advisory Team?
                 </h2>
                 <p className="text-[#c2c6d6] text-base max-w-xl mx-auto mb-8">
-                  Get started in 2 minutes. Start your 30-day trial with full access to Gemini AI voice processing.
+                  Get started in 2 minutes. Full access to AI call recording, renewal tracking, and WhatsApp automation — free for 90 days.
                 </p>
                 <button
                   onClick={() => setCurrentView('login')}
