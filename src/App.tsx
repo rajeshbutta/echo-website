@@ -7,6 +7,7 @@ import { HeroSection } from './components/HeroSection';
 import { ProblemSection } from './components/ProblemSection';
 import { FeaturesSection } from './components/FeaturesSection';
 import { TrustSection } from './components/TrustSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
 import { LiveVoiceDemo } from './components/LiveVoiceDemo';
 import { VideoSection } from './components/VideoSection';
 import { PricingView } from './components/PricingView';
@@ -78,6 +79,7 @@ export default function App() {
             <ProblemSection />
             <FeaturesSection />
             <TrustSection />
+            <TestimonialsSection />
             <VideoSection />
 
             {/* Embedded Live Demo section on home page */}

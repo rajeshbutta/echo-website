@@ -122,6 +122,20 @@ export const FeaturesSection: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Mid-page CTA */}
+        <div className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-6 pt-10 border-t border-white/10">
+          <div>
+            <div className="font-display font-bold text-white text-lg">Ready to see it live?</div>
+            <div className="text-[#c2c6d6] text-sm mt-1">90-day free trial · No credit card · Setup in 2 minutes</div>
+          </div>
+          <button
+            onClick={() => window.open('https://admin.saraltechnomart.com', '_blank')}
+            className="btn-primary px-8 py-3.5 rounded-full font-bold text-sm text-white shadow-xl shadow-blue-600/30 hover:scale-105 active:scale-95 transition-all whitespace-nowrap"
+          >
+            Start Free 90-Day Trial →
+          </button>
+        </div>
       </div>
     </section>
   );

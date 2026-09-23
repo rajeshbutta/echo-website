@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 Echo
               </span>
               <span className="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">
-                Voice Sales OS
+                AI CRM for Advisors
               </span>
             </div>
           </button>

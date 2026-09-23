@@ -1,5 +1,6 @@
 import React from 'react';
 import { ViewType } from '../types';
+import { AppPreview } from './AppPreview';
 
 interface HeroSectionProps {
   setCurrentView: (view: ViewType) => void;
@@ -18,7 +19,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
         <div className="lg:col-span-7 flex flex-col items-start gap-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/30 text-[#adc6ff] text-xs font-semibold tracking-wide uppercase">
             <span className="w-2 h-2 rounded-full bg-[#3b82f6] animate-pulse" />
-            Voice Sales OS for Advisors
+            AI CRM for Insurance &amp; Wealth Advisors
           </div>
 
           <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight">
@@ -69,15 +70,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
           </div>
         </div>
 
-        {/* Right Column 3D Smartphone Image */}
+        {/* Right Column — Live App Preview */}
         <div className="lg:col-span-5 relative flex justify-center items-center">
           <div className="absolute inset-0 bg-[#3b82f6]/20 rounded-full blur-[90px] z-0" />
-          <div className="relative z-10 w-full max-w-[420px] flex justify-center items-center">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqxaNeBNIThGHMIDoTGsb7ggJeFRu7-T1HNt1Opce0WDzYDZ6C3G0JwtEGK1sow5gsXM-8CSKBhA2VaWFlZmaRqLx75E_e_CQ9shzLvYQ9cBTWj8DJoy_IItaZm2Gp4Ka0Dv3dxJWM5bySXZ47aOqZP1LZ9Fg54BJfrzDDK8bw-WUZHks-KbwoWbANQOYHos0mtgO4hNImUvVAyekOwQCvPQ9FJfpEYe5KKPQJfmmNIfoetwEmRT-e"
-              alt="Echo Voice Sales OS Smartphone App"
-              className="w-full h-auto drop-shadow-[0_25px_60px_rgba(77,142,255,0.4)] animate-float"
-            />
+          <div className="relative z-10 w-full flex justify-center items-center">
+            <AppPreview />
           </div>
         </div>
       </div>
