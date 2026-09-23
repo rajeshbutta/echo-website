@@ -63,8 +63,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ setCurrentView, onOpen
               <div className="text-xs text-[#c2c6d6]/70 mt-1">Policy Renewals</div>
             </div>
             <div>
-              <div className="font-display text-2xl sm:text-3xl font-bold text-[#d0bcff]">₹500</div>
-              <div className="text-xs text-[#c2c6d6]/70 mt-1">Per User / Month</div>
+              <div className="font-display text-2xl sm:text-3xl font-bold text-[#d0bcff]">90 Days</div>
+              <div className="text-xs text-[#c2c6d6]/70 mt-1">Free Trial, No Card Needed</div>
             </div>
           </div>
         </div>
