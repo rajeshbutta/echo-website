@@ -11,16 +11,14 @@ export function VideoSection() {
           Watch how Echo transforms post-call workflows for financial advisory teams.
         </p>
       </div>
-      <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/30 max-w-4xl mx-auto">
-        <video
-          controls
-          playsInline
-          className="w-full"
-          poster=""
-        >
-          <source src="/echo-marketing.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/30 max-w-4xl mx-auto" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+        <iframe
+          src="https://www.youtube.com/embed/H3hM-uBkriE"
+          title="Echo CRM — AI-Powered CRM for Insurance &amp; Financial Advisors"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+        />
       </div>
     </section>
   );

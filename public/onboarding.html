@@ -483,6 +483,7 @@ img { max-width: 100%; }
     Echo CRM
   </a>
   <ul class="nav-links">
+    <li><a href="#video">Watch Video</a></li>
     <li><a href="#steps">Get Started</a></li>
     <li><a href="#modules">Modules</a></li>
     <li><a href="#tips">Good to Know</a></li>
@@ -514,6 +515,23 @@ img { max-width: 100%; }
   </div>
 </section>
 
+<!-- VIDEO -->
+<section class="section section--alt" id="video" style="padding-top:clamp(40px,6vw,64px);padding-bottom:clamp(40px,6vw,64px);">
+  <div class="section-inner">
+    <p class="section-eyebrow">Watch It</p>
+    <h2 class="section-title" style="margin-bottom:28px;">See Echo in action</h2>
+    <div style="position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 8px 40px rgba(0,32,96,0.12);">
+      <iframe
+        src="https://www.youtube.com/embed/H3hM-uBkriE"
+        title="Echo CRM — AI-Powered CRM for Insurance &amp; Financial Advisors"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 <!-- STEPS -->
 <section class="section" id="steps">
   <div class="section-inner">
@@ -529,7 +547,6 @@ img { max-width: 100%; }
         <div class="step-body">
           <h3 class="step-title">Sign in with your phone number</h3>
           <p class="step-text">Visit <a href="https://admin.saraltechnomart.com/login" target="_blank">admin.saraltechnomart.com</a>. Enter your mobile number — you'll receive a <strong>6-digit OTP</strong> to verify. No password needed.</p>
-          <p class="step-text"><em>Beta period only: the OTP is currently fixed as 123456 for all logins — this will switch to a live OTP before public launch.</em></p>
           <span class="step-pill">OTP expires in 5 minutes</span>
         </div>
       </div>
@@ -565,7 +582,7 @@ img { max-width: 100%; }
         <div class="step-body">
           <h3 class="step-title">Import your clients &amp; policies</h3>
           <p class="step-text">Go to <strong>Renewals → Import</strong>. Download the CSV template, fill in your client and policy data, then upload.</p>
-          <p class="step-text">Mandatory columns: <strong>Client Name, Mobile, Product, Amount, Policy No., Periodicity, Start Date</strong>.</p>
+          <p class="step-text">Mandatory columns: <strong>Client Name, Mobile, Product Category, Product Name</strong>. Once imported, open each client product to set the renewal schedule — reference number, provider, premium amount, periodicity, and next due date.</p>
           <p class="step-text">Currently enabled for insurance advisors. For those managing loans, investments, or other recurring products, this feature is being adapted — we'd love your feedback on what works best.</p>
           <span class="step-pill">Bulk upload supported</span>
         </div>
@@ -632,7 +649,7 @@ img { max-width: 100%; }
       <div class="module">
         <div class="module-icon">🔄</div>
         <div class="module-name">Renewals</div>
-        <div class="module-desc">Track all client policies and products, due dates, payment status, and send automated or manual reminders.</div>
+        <div class="module-desc">Assign products to clients by category (term, health, SIP, motor, and more). Set renewal details — reference number, provider, premium, and due date — separately per product. Track all due dates, payment status, and send automated or manual reminders. Reminder logs are available under <strong>Renewal Activity</strong>.</div>
       </div>
       <div class="module">
         <div class="module-icon">👤</div>
@@ -681,8 +698,8 @@ img { max-width: 100%; }
       </div>
 
       <div class="tip">
-        <div class="tip-label">Calling Number</div>
-        <p class="tip-text">Echo assigns your organisation a <strong>dedicated calling number</strong> through Plivo. All calls made through the app will show this number as the caller ID — keeping your personal number private and giving your team a single official number.</p>
+        <div class="tip-label">Calling Numbers</div>
+        <p class="tip-text">Echo assigns your organisation <strong>one or more virtual calling numbers</strong> through Plivo. You can configure multiple numbers — for example, assign a dedicated number to each advisor or to different teams and territories. All calls made through the app show your organisation's virtual number as the caller ID, keeping personal numbers private.</p>
       </div>
 
       <div class="tip">
@@ -715,17 +732,27 @@ img { max-width: 100%; }
       <p class="download-note">
         Open this link on your Android device and tap Install.<br>
         If prompted, enable <em>"Install from unknown sources"</em> in your device settings.<br>
-        <span style="margin-top:6px;display:inline-block;">Apple users: use <a href="https://admin.saraltechnomart.com" target="_blank">admin.saraltechnomart.com</a> in any mobile browser.</span>
+        <span style="margin-top:6px;display:inline-block;">Apple users: use <a href="https://admin.saraltechnomart.com" target="_blank">admin.saraltechnomart.com</a> in any mobile browser.</span><br>
+        <span style="margin-top:6px;display:inline-block;color:rgba(255,200,80,0.75);">⏳ App v1.8.61 is under review on Google Play — download the APK directly while you wait.</span>
       </p>
     </div>
-    <a href="https://echo.saraltechnomart.com/download/echo-latest.apk" class="btn-download">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-        <polyline points="7 10 12 15 17 10"/>
-        <line x1="12" y1="15" x2="12" y2="3"/>
-      </svg>
-      Download APK
-    </a>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+      <a href="https://echo.saraltechnomart.com/download/echo-latest.apk" class="btn-download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download APK
+      </a>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:10px;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.07);opacity:0.75;cursor:default;" title="Under review on Google Play">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="color:rgba(255,255,255,0.7)"><path d="M3.18 23.76c.3.17.64.24.99.19l12.64-7.3-2.79-2.79L3.18 23.76zM.19 1.05C.07 1.33 0 1.64 0 1.98v20.04c0 .34.07.65.19.93l.09.09 11.22-11.22v-.27L.28.96.19 1.05zm19.89 9.27-3.17-1.83-3.14 3.14 3.14 3.14 3.18-1.84c.91-.52.91-1.37-.01-1.61zM4.17.43l12.64 7.3-2.79 2.79L4.17.43z"/></svg>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;">
+          <span style="font-size:0.65rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">Coming Soon</span>
+          <span style="font-size:0.9rem;font-weight:700;color:rgba(255,255,255,0.75);">Google Play</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -733,7 +760,7 @@ img { max-width: 100%; }
 <footer class="footer">
   <div class="footer-brand">Echo CRM · Saral TechnoMart Private Limited</div>
   <ul class="footer-links">
-    <li><a href="mailto:echo-support@saraltechnomart.com">echo-support@saraltechnomart.com</a></li>
+    <li><a href="mailto:support@saraltechnomart.com">support@saraltechnomart.com</a></li>
     <li><a href="https://admin.saraltechnomart.com" target="_blank">admin.saraltechnomart.com</a></li>
   </ul>
 </footer>

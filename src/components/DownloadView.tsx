@@ -33,7 +33,7 @@ export const DownloadView: React.FC<DownloadViewProps> = ({ setCurrentView }) =>
               Transform your advisor workflow with the Voice Sales OS. Record, analyze, and automate on the go.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-6 mt-6 w-full">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 w-full flex-wrap">
               {/* Primary Download Button */}
               <a
                 href="https://echo.saraltechnomart.com/download/echo-latest.apk"
@@ -48,23 +48,39 @@ export const DownloadView: React.FC<DownloadViewProps> = ({ setCurrentView }) =>
                 </div>
               </a>
 
-              <div className="hidden sm:flex items-center gap-4">
-                <div className="h-12 w-px bg-white/20" />
-                <a
-                  href="/onboarding.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#adc6ff] hover:text-white text-sm font-semibold transition-colors flex items-center gap-1.5"
-                >
-                  <span className="material-symbols-outlined text-base">menu_book</span>
-                  Quick Start Guide
-                </a>
+              {/* Google Play Coming Soon */}
+              <div
+                className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl w-full sm:w-auto border border-white/20 bg-white/5 cursor-not-allowed opacity-70"
+                title="Under review on Google Play"
+              >
+                <span className="material-symbols-outlined text-[28px] text-[#adc6ff]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                  store
+                </span>
+                <div className="flex flex-col items-start">
+                  <span className="text-[10px] text-[#adc6ff] uppercase tracking-wider font-semibold">Coming Soon</span>
+                  <span className="text-base font-bold text-white">Google Play</span>
+                </div>
               </div>
             </div>
 
-            <p className="text-[#c2c6d6]/60 text-xs mt-4 max-w-sm">
-              Google Play Store listing coming soon. Until then, download the APK directly and install on your Android device.
-            </p>
+            <div className="flex items-center gap-2 mt-4">
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
+              <p className="text-amber-300/80 text-xs max-w-sm">
+                App v1.8.61 is under review on Google Play Store. Download the APK directly until it goes live.
+              </p>
+            </div>
+
+            <div className="hidden sm:flex items-center gap-4 mt-2">
+              <a
+                href="/onboarding.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#adc6ff] hover:text-white text-sm font-semibold transition-colors flex items-center gap-1.5"
+              >
+                <span className="material-symbols-outlined text-base">menu_book</span>
+                Quick Start Guide
+              </a>
+            </div>
           </div>
 
           {/* Right: App Showcase Image */}
