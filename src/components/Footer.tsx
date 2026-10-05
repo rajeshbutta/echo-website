@@ -80,13 +80,13 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentView }) => {
           <h4 className="font-semibold text-xs tracking-wider uppercase text-white mb-1">
             Legal & Compliance
           </h4>
-          <a href="#privacy" onClick={(e) => { e.preventDefault(); alert('Echo complies with IRDAI data guidelines and ISO 27001 encryption standards.'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
+          <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer" className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
             Privacy Policy
           </a>
-          <a href="#terms" onClick={(e) => { e.preventDefault(); alert('Terms of Service: End-to-end encrypted session & advisor data protection.'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
+          <a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer" className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
             Terms of Service
           </a>
-          <a href="#refund" onClick={(e) => { e.preventDefault(); alert('14-day hassle-free refund policy for paid subscriptions.'); }} className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
+          <a href="/refund-policy.html" target="_blank" rel="noopener noreferrer" className="text-[#c2c6d6] hover:text-[#adc6ff] transition-colors">
             Refund Policy
           </a>
         </div>
