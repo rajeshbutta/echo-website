@@ -4,7 +4,7 @@
   "framework": "vite",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/download/echo-latest.apk", "destination": "/download/echo-v1.8.68.apk" }
+    { "source": "/download/echo-latest.apk", "destination": "/download/echo-v1.8.69.apk" }
   ],
   "headers": [
     {
