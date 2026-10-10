@@ -481,6 +481,8 @@ img { max-width: 100%; }
   .hero { background: #002060 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   section, .step-card, .module-card, .tip { break-inside: avoid; }
   a { color: inherit !important; text-decoration: none !important; }
+  .video-wrapper { display: none !important; }
+  .video-print-fallback { display: block !important; }
 }
 </style>
 
@@ -529,7 +531,7 @@ img { max-width: 100%; }
   <div class="section-inner">
     <p class="section-eyebrow">Watch It</p>
     <h2 class="section-title" style="margin-bottom:28px;">See Echo in action</h2>
-    <div style="position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 8px 40px rgba(0,32,96,0.12);">
+    <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 8px 40px rgba(0,32,96,0.12);">
       <iframe
         src="https://www.youtube.com/embed/H3hM-uBkriE"
         title="Echo CRM — AI-Powered CRM for Insurance &amp; Financial Advisors"
@@ -537,6 +539,18 @@ img { max-width: 100%; }
         allowfullscreen
         style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
       </iframe>
+    </div>
+    <div class="video-print-fallback" style="display:none;">
+      <a href="https://www.youtube.com/watch?v=H3hM-uBkriE" target="_blank" style="text-decoration:none;display:block;border-radius:14px;overflow:hidden;border:1px solid #cdd5e0;position:relative;">
+        <img src="https://img.youtube.com/vi/H3hM-uBkriE/maxresdefault.jpg" alt="Echo CRM Demo Video" style="width:100%;display:block;">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,32,96,0.45);">
+          <div style="width:64px;height:64px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
+            <div style="width:0;height:0;border-top:16px solid transparent;border-bottom:16px solid transparent;border-left:26px solid #002060;margin-left:6px;"></div>
+          </div>
+          <span style="color:#fff;font-size:14px;font-weight:600;">Watch on YouTube</span>
+          <span style="color:rgba(255,255,255,0.75);font-size:12px;margin-top:4px;">youtube.com/watch?v=H3hM-uBkriE</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
