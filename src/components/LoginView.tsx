@@ -138,19 +138,15 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLoginSuccess, setCurrent
           <div className="flex-grow border-t border-white/10" />
         </div>
 
-        {/* Social Logins */}
+        {/* Quick Demo Logins */}
         <div className="flex flex-col gap-3">
           <button
             type="button"
             onClick={handleQuickAdvisor}
             className="w-full bg-white/5 border border-white/15 hover:bg-white/10 text-white py-2.5 rounded-xl text-sm font-medium transition-all flex justify-center items-center gap-3"
           >
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvKf3pR5-mM3y9wXAIUNVzmA2o28HOmiD_SD9QQX1MBCXoUNakj55UU6Th11bc6hrJVHJSGGpWXwXBQy1E8R_JsUKkdbR2cmtCQvZJ0nOR1uKBWvOte_vkCEST7qwcaALht6Fa-xctSrCO8J9oYeXQzJGkgH11AYU6FJuPyK9I1JzaQALLsJ4kgVdreOpdlW-mnhGmqfp8zZqLxt1W3AqRYNAuRxiPIogMrPgWcfuCJmumyrYOX7V5"
-              alt="Microsoft Logo"
-              className="w-5 h-5 object-contain"
-            />
-            Microsoft Workspace
+            <span className="material-symbols-outlined text-[18px] text-[#adc6ff]">person</span>
+            Quick Demo — Advisor View
           </button>
 
           <button
@@ -158,14 +154,14 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLoginSuccess, setCurrent
             onClick={handleQuickAdmin}
             className="w-full bg-white/5 border border-white/15 hover:bg-white/10 text-white py-2.5 rounded-xl text-sm font-medium transition-all flex justify-center items-center gap-3"
           >
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtrOr3V2Nd_t_yirUxWtSRL1VZ-kbGyeW-xze8Kf5Jlio7rI6n3bw1tFHY-kuloY4BOwbRdANxVFnZAbOz-ydMn954fcbcuEhRB6J4ajjekuxDghGMlX3fxSNZg7m_4BXBYj_KpycQ0lpCA2Xsq9daJzOBYjsf5BxXvVS6BXdmn-YJW56pU-xPvUYpy752tSICTD796e6IPwO0OjkOCQVrWo7C1SF1Dw5IOSDcd5ooqkdg5yq0n5pT"
-              alt="Google Workspace Logo"
-              className="w-5 h-5 object-contain"
-            />
-            Google Workspace
+            <span className="material-symbols-outlined text-[18px] text-[#adc6ff]">admin_panel_settings</span>
+            Quick Demo — Admin View
           </button>
         </div>
+
+        <p className="text-center text-[10px] text-[#8c909f] leading-relaxed">
+          This is an interactive demo. In the real app, sign in with your mobile number and receive a one-time OTP via WhatsApp or SMS — no password needed.
+        </p>
 
         {/* Status */}
         <div className="text-center pt-2">

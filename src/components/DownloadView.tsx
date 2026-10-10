@@ -48,26 +48,21 @@ export const DownloadView: React.FC<DownloadViewProps> = ({ setCurrentView }) =>
                 </div>
               </a>
 
-              {/* Google Play Coming Soon */}
-              <div
-                className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl w-full sm:w-auto border border-white/20 bg-white/5 cursor-not-allowed opacity-70"
-                title="Under review on Google Play"
+              {/* Google Play */}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.saraltechnomart.echo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl w-full sm:w-auto border border-white/25 bg-white/10 hover:bg-white/15 transition-colors"
               >
-                <span className="material-symbols-outlined text-[28px] text-[#adc6ff]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                <span className="material-symbols-outlined text-[28px] text-white" style={{ fontVariationSettings: "'FILL' 1" }}>
                   store
                 </span>
                 <div className="flex flex-col items-start">
-                  <span className="text-[10px] text-[#adc6ff] uppercase tracking-wider font-semibold">Coming Soon</span>
+                  <span className="text-[10px] text-white/75 uppercase tracking-wider font-semibold">Get it on</span>
                   <span className="text-base font-bold text-white">Google Play</span>
                 </div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2 mt-4">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
-              <p className="text-amber-300/80 text-xs max-w-sm">
-                App v1.8.61 is under review on Google Play Store. Download the APK directly until it goes live.
-              </p>
+              </a>
             </div>
 
             <div className="hidden sm:flex items-center gap-4 mt-2">
