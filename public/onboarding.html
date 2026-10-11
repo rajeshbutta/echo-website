@@ -483,6 +483,7 @@ img { max-width: 100%; }
   a { color: inherit !important; text-decoration: none !important; }
   .video-wrapper { display: none !important; }
   .video-print-fallback { display: block !important; }
+  .video-print-fallback a { color: #002060 !important; text-decoration: underline !important; }
 }
 </style>
 
@@ -541,16 +542,18 @@ img { max-width: 100%; }
       </iframe>
     </div>
     <div class="video-print-fallback" style="display:none;">
-      <a href="https://www.youtube.com/watch?v=H3hM-uBkriE" target="_blank" style="text-decoration:none;display:block;border-radius:14px;overflow:hidden;border:1px solid #cdd5e0;position:relative;">
-        <img src="https://img.youtube.com/vi/H3hM-uBkriE/maxresdefault.jpg" alt="Echo CRM Demo Video" style="width:100%;display:block;">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,32,96,0.45);">
-          <div style="width:64px;height:64px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
-            <div style="width:0;height:0;border-top:16px solid transparent;border-bottom:16px solid transparent;border-left:26px solid #002060;margin-left:6px;"></div>
-          </div>
-          <span style="color:#fff;font-size:14px;font-weight:600;">Watch on YouTube</span>
-          <span style="color:rgba(255,255,255,0.75);font-size:12px;margin-top:4px;">youtube.com/watch?v=H3hM-uBkriE</span>
+      <div style="border:2px solid #002060;border-radius:12px;padding:28px 32px;background:#f0f4ff;display:flex;align-items:center;gap:24px;">
+        <div style="width:56px;height:56px;background:#002060;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <div style="width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:20px solid #fff;margin-left:5px;"></div>
         </div>
-      </a>
+        <div>
+          <div style="font-size:15px;font-weight:700;color:#002060;margin-bottom:4px;">Watch Echo CRM in Action</div>
+          <div style="font-size:13px;color:#444;margin-bottom:6px;">Scan or visit the link below to watch the product walkthrough video.</div>
+          <a href="https://www.youtube.com/watch?v=H3hM-uBkriE" style="font-size:13px;color:#002060;font-weight:600;word-break:break-all;">
+            https://www.youtube.com/watch?v=H3hM-uBkriE
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
