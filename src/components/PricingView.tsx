@@ -26,6 +26,7 @@ const MINUTES_TABLE = [
 
 export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSelectPlan }) => {
   const [isAnnual, setIsAnnual] = useState(true);
+  const [isIndia, setIsIndia] = useState(true);
 
   return (
     <div className="pt-28 pb-20 px-6 max-w-screen-2xl mx-auto flex flex-col gap-16 relative">
@@ -44,6 +45,22 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
         <p className="text-[#c2c6d6] text-base sm:text-lg">
           Every organization starts with a full 90-day trial. No credit card. No limits on features.
         </p>
+
+        {/* Region Toggle */}
+        <div className="flex items-center justify-center gap-1 mt-4 bg-white/5 border border-white/10 rounded-full p-1 w-fit mx-auto">
+          <button
+            onClick={() => setIsIndia(true)}
+            className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${isIndia ? 'bg-[#3b82f6] text-white shadow' : 'text-[#c2c6d6] hover:text-white'}`}
+          >
+            🇮🇳 India (₹)
+          </button>
+          <button
+            onClick={() => setIsIndia(false)}
+            className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${!isIndia ? 'bg-[#3b82f6] text-white shadow' : 'text-[#c2c6d6] hover:text-white'}`}
+          >
+            🌍 International ($)
+          </button>
+        </div>
       </section>
 
       {/* Free Trial Banner */}
@@ -59,7 +76,10 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
                 <h2 className="font-display font-bold text-2xl text-white">90-Day Free Trial</h2>
               </div>
               <p className="text-[#c2c6d6] text-sm max-w-lg">
-                Every new organization receives <strong className="text-white">₹7,500 worth of Echo credits</strong> — 5 users × ₹500 × 3 months. Full product access. No payment details required at signup.
+                {isIndia
+                  ? <>Every new organization receives <strong className="text-white">₹7,500 worth of Echo credits</strong> — 5 users × ₹500 × 3 months. Full product access. No payment details required at signup.</>
+                  : <>Every new organization receives <strong className="text-white">$120 worth of Echo credits</strong> — 5 users × $8 × 3 months. Full product access. No payment details required at signup.</>
+                }
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {['Up to 5 users', 'Full feature access', '4,500 call mins', 'No card needed'].map(tag => (
@@ -114,12 +134,12 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
                 <p className="text-[#c2c6d6] text-sm mt-1">Billed every 3 months in advance</p>
               </div>
               <div className="flex items-baseline gap-1 py-2">
-                <span className="text-2xl text-[#c2c6d6]">₹</span>
-                <span className="font-display font-extrabold text-5xl text-white">1,800</span>
+                <span className="text-2xl text-[#c2c6d6]">{isIndia ? '₹' : '$'}</span>
+                <span className="font-display font-extrabold text-5xl text-white">{isIndia ? '1,800' : '30'}</span>
                 <span className="text-[#c2c6d6] text-sm">/user/quarter</span>
               </div>
               <div className="text-[#c2c6d6] text-sm bg-white/5 rounded-lg px-4 py-3">
-                ₹600 per user per month equivalent · Min. 2 users
+                {isIndia ? '₹600 per user per month equivalent · Min. 2 users' : '$10 per user per month equivalent · Min. 2 users'}
               </div>
               <ul className="space-y-3 pt-2">
                 {INCLUDED_FEATURES.map(f => (
@@ -137,7 +157,7 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
                   900 mins/user/quarter · 300 mins/user/month (pooled)
                 </li>
                 <li className="flex items-start gap-3 text-[#c2c6d6] text-xs mt-1 ml-7">
-                  <span>Includes calling, transcription, AI summaries, storage &amp; notifications. Overage at ₹1.80/min.</span>
+                  <span>{isIndia ? 'Includes calling, transcription, AI summaries, storage & notifications. Overage at ₹1.80/min.' : 'Includes AI transcription, AI summaries, storage & notifications.'}</span>
                 </li>
               </ul>
             </div>
@@ -166,12 +186,12 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
                 </span>
               </div>
               <div className="flex items-baseline gap-1 py-2">
-                <span className="text-2xl text-[#c2c6d6]">₹</span>
-                <span className="font-display font-extrabold text-5xl text-white">6,000</span>
+                <span className="text-2xl text-[#c2c6d6]">{isIndia ? '₹' : '$'}</span>
+                <span className="font-display font-extrabold text-5xl text-white">{isIndia ? '6,000' : '96'}</span>
                 <span className="text-[#c2c6d6] text-sm">/user/year</span>
               </div>
               <div className="text-[#adc6ff] text-sm bg-[#3b82f6]/10 rounded-lg px-4 py-3 border border-[#3b82f6]/20">
-                ₹500 per user per month equivalent · Save ₹400/user vs quarterly · Min. 2 users
+                {isIndia ? '₹500 per user per month equivalent · Save ₹400/user vs quarterly · Min. 2 users' : '$8 per user per month equivalent · Save $24/user vs quarterly · Min. 2 users'}
               </div>
               <ul className="space-y-3 pt-2">
                 {INCLUDED_FEATURES.map(f => (
@@ -189,7 +209,7 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
                   3,600 mins/user/year · 300 mins/user/month (pooled)
                 </li>
                 <li className="flex items-start gap-3 text-[#c2c6d6] text-xs mt-1 ml-7">
-                  <span>Includes calling, transcription, AI summaries, storage &amp; notifications. Overage at ₹1.80/min.</span>
+                  <span>{isIndia ? 'Includes calling, transcription, AI summaries, storage & notifications. Overage at ₹1.80/min.' : 'Includes AI transcription, AI summaries, storage & notifications.'}</span>
                 </li>
               </ul>
             </div>
@@ -206,8 +226,8 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
         </div>
       </section>
 
-      {/* Pooled Minutes Table */}
-      <section className="relative z-10 max-w-3xl mx-auto w-full">
+      {/* Pooled Minutes Table — India only */}
+      {isIndia && <section className="relative z-10 max-w-3xl mx-auto w-full">
         <h2 className="font-display font-bold text-xl text-white text-center mb-6">Included Call Minutes (Pooled per Org)</h2>
         <div className="glass-card rounded-2xl overflow-hidden border border-white/10">
           <table className="w-full text-sm">
@@ -232,7 +252,7 @@ export const PricingView: React.FC<PricingViewProps> = ({ setCurrentView, onSele
             Minutes include calling number charges, AI transcription, AI summaries, storage &amp; notifications. Overage billed at ₹1.80/min on next quarterly invoice. Calling continues uninterrupted.
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* Policy notes */}
       <section className="relative z-10 max-w-3xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
